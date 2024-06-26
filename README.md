@@ -2,6 +2,8 @@
   <h1>Nuxt 3 Blog</h1>
 </div>
 
+[Original warehouse address](https://github.com/chansee97/nuxt-blog)
+
 site style form [antfu.me](https://antfu.me/), But base on [nuxt3](https://nuxt.com/)
 
 > [!IMPORTANT]

@@ -1,6 +1,6 @@
 export const siteConfig = {
-  author: 'Rock Chen',
-  title: 'Rock Chen - Blog',
+  author: 'Myltx',
+  title: 'Myltx - Blog',
   description: 'My blog site.',
   lang: 'zh-CN',
 }
@@ -52,22 +52,22 @@ export const navLinks = [
 export const socialLinks = [
   {
     title: '掘金',
-    path: 'https://juejin.cn/user/3826745248595550',
+    path: 'https://juejin.cn/user/2524134428904894',
     icon: 'i-simple-icons-juejin',
   },
   {
     title: 'Bilibili',
-    path: 'https://space.bilibili.com/3850132',
+    path: 'https://space.bilibili.com/167390207',
     icon: 'i-simple-icons-bilibili',
   },
   {
     title: 'Twitter',
-    path: 'https://twitter.com/Rockchen97',
+    path: 'https://x.com/myl_tx',
     icon: 'i-simple-icons-twitter',
   },
   {
     title: 'Github',
-    path: 'https://github.com/chansee97',
+    path: 'https://github.com/myltx',
     icon: 'i-icon-park-outline-github',
   },
 ]
