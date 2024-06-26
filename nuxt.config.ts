@@ -45,6 +45,7 @@ export default defineNuxtConfig({
         'c',
         'cpp',
         'java',
+        'javascript',
       ],
 
     },
