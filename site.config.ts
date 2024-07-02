@@ -15,8 +15,8 @@ export const subNavLinks = [
     path: '/learning',
   },
   {
-    title: 'note',
-    path: '/notes',
+    title: 'question',
+    path: '/questions',
   },
 ]
 
