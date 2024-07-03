@@ -42,7 +42,7 @@ export default defineNuxtConfig({
         // Theme used if `html.sepia`
         sepia: 'monokai',
       },
-      preload: ['c', 'cpp', 'java', 'javascript'],
+      preload: ['c', 'cpp', 'java', 'javascript', 'typescript', 'vue'],
     },
   },
   css: [
