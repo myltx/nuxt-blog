@@ -77,30 +77,40 @@ export const projectList = [
     name: 'Projects',
     content: [
       {
-        name: 'Nuxt Blog',
-        desc: 'My blog site, base on Nuxt',
-        path: 'https://github.com/chansee97/nuxt-blog',
+        name: 'Vue3-ts',
+        desc: 'My admin template',
+        path: 'https://vue.t.myltx.top/#/login',
       },
       {
-        name: 'Nova Admin',
-        desc: 'a complete admin template',
-        path: 'https://github.com/chansee97/nova-admin',
+        name: 'v2toclash',
+        desc: 'A project to convert v2vary to clashpro',
+        path: 'https://v2toclash.myltx.top/',
       },
       {
-        name: 'Nova Admin Nest',
-        desc: 'The nest backend for nova admin',
-        path: 'https://github.com/chansee97/nove-admin-nest',
+        name: 'vite-uniapp-template-ts',
+        desc: 'A vite-uniapp-template-ts project',
+        path: 'https://vite-uniapp-template-ts.myltx.top/#/',
+      },
+      {
+        name: 'Vue3-Screen',
+        desc: 'A big screen project',
+        path: 'https://large.screen.myltx.top/#/',
+      },
+      {
+        name: 'Note',
+        desc: 'A notes project using vitepress',
+        path: 'https://note.myltx.top/',
       },
     ],
   },
-  {
-    name: 'Starter',
-    content: [
-      {
-        name: 'Virtuoso',
-        desc: 'My simply vue starter',
-        path: 'https://github.com/chansee97/virtuoso',
-      },
-    ],
-  },
+  // {
+  //   name: 'Starter',
+  //   content: [
+  //     {
+  //       name: 'Virtuoso',
+  //       desc: 'My simply vue starter',
+  //       path: 'https://github.com/chansee97/virtuoso',
+  //     },
+  //   ],
+  // },
 ]

@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/stylelint-module',
   ],
+  devServer: {
+    port: 8000, // default: 3000
+  },
   app: {
     rootId: 'nuxt-root',
     head: {
@@ -20,9 +23,7 @@ export default defineNuxtConfig({
         { charset: 'UTF-8' },
         { 'http-equiv': 'X-UA-Compatible', 'content': 'IE=edge' },
       ],
-      noscript: [
-        { children: 'JavaScript is required' },
-      ],
+      noscript: [{ children: 'JavaScript is required' }],
       htmlAttrs: {
         lang: siteConfig.lang,
       },
@@ -41,13 +42,7 @@ export default defineNuxtConfig({
         // Theme used if `html.sepia`
         sepia: 'monokai',
       },
-      preload: [
-        'c',
-        'cpp',
-        'java',
-        'javascript',
-      ],
-
+      preload: ['c', 'cpp', 'java', 'javascript'],
     },
   },
   css: [
