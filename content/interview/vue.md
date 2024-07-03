@@ -5,11 +5,9 @@ tags:
   - interview
   - js
   - vue
-title: 面试题-VUE
-en-title: 面试题-VUE
+title: Vue
+en-title: 
 ---
-
-# Vue
 
 ## 1.为什么要在列表组件中写 key，其作用是什么？
 

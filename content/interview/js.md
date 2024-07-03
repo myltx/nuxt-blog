@@ -4,10 +4,9 @@ url:
 tags:
   - interview
   - js
-title: 面试题-JS
-en-title: 面试题-JS
+title: Javascript
+en-title: 
 ---
-# JS
 ## 1.箭头函数和 function 的区别.
 
 - 箭头函数根本就没有绑定自己的 `this`，在箭头函数中调用 `this` 时，仅仅是简单的沿着作 用域链向上寻找，找到最近的一个 `this` 拿来使用

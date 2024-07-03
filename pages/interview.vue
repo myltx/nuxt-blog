@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getIncludedYearPosts } from '@/utils'
 
-const posts = await getIncludedYearPosts('learning')
+const posts = await getIncludedYearPosts('interview')
 </script>
 
 <template>

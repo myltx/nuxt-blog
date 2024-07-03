@@ -7,12 +7,12 @@ export const siteConfig = {
 
 export const subNavLinks = [
   {
-    title: 'Blog',
+    title: 'Note',
     path: '/blog',
   },
   {
-    title: 'learning',
-    path: '/learning',
+    title: 'Interview',
+    path: '/interview',
   },
   {
     title: 'question',
