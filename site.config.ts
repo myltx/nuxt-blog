@@ -89,7 +89,7 @@ export const projectList = [
       {
         name: 'vite-uniapp-template-ts',
         desc: 'A vite-uniapp-template-ts project',
-        path: 'https://vite-uniapp-template-ts.myltx.top/#/',
+        path: 'https://github.com/myltx/vite-uniapp-template-ts',
       },
       {
         name: 'Vue3-Screen',
