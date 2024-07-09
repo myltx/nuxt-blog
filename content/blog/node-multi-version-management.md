@@ -30,9 +30,16 @@ en-title: Node多版本控制
   ```
 ### 使用
 ```shell
+# 全局
 $ mise use --global node@20
 $ node -v
 v20.0.0
+
+# 单项目
+$ mise use node@20
+$ node -v
+v20.0.0
+
 ```
 
 
