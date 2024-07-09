@@ -34,10 +34,10 @@ watch(searchValue, getQueryResult)
 
 <template>
   <h1 class="text-title mb-2em font-bold">
-    Search
+    搜索
   </h1>
   <div class="slide-enter-content">
-    <input v-model="searchValue" placeholder="Search post title / description / tag" class="search-input mb-2em">
+    <input v-model="searchValue" placeholder="请输入标题/标签/描述" class="search-input mb-2em">
     <ul>
       <cell
         v-for="(article, index) in queryResult" :key="article._path" :article="article"

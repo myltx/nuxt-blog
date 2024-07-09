@@ -21,7 +21,7 @@ const tagsContent = contentQuery
 
 <template>
   <h1 class="text-title mb-2em font-bold">
-    Tags
+    标签
   </h1>
   <ul class="flex gap-1em flex-wrap">
     <li v-for="(value, key, index) in tagsContent" :key="key" slide-enter :style="{ '--stagger': index + 1 }" class="px-2 bg-gray-400:20 rd-1">

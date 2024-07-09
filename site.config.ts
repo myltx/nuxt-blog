@@ -7,42 +7,42 @@ export const siteConfig = {
 
 export const subNavLinks = [
   {
-    title: 'Note',
+    title: '笔记',
     path: '/blog',
   },
   {
-    title: 'Interview',
+    title: '面试',
     path: '/interview',
   },
   {
-    title: 'question',
+    title: '问题记录',
     path: '/questions',
   },
 ]
 
 export const navLinks = [
   {
-    title: 'Blog',
+    title: '笔记',
     path: '/blog',
     icon: 'i-icon-park-outline-align-text-right-one',
   },
   {
-    title: 'Projects',
+    title: '项目',
     path: '/projects',
     icon: 'i-icon-park-outline-blocks-and-arrows',
   },
   {
-    title: 'Tags',
+    title: '标签',
     path: '/tags',
     icon: 'i-icon-park-outline-tag-one',
   },
   {
-    title: 'Search',
+    title: '搜索',
     path: '/search',
     icon: 'i-icon-park-outline-search',
   },
   {
-    title: 'About',
+    title: '关于',
     path: '/',
     icon: 'i-icon-park-outline-grinning-face-with-open-mouth',
   },
@@ -74,43 +74,53 @@ export const socialLinks = [
 
 export const projectList = [
   {
-    name: 'Projects',
+    name: '个人项目',
     content: [
       {
         name: 'Vue3-ts',
-        desc: 'My admin template',
+        desc: '🚀 基于 Vue3 + Ts + Vite 开发的后台管理项目',
         path: 'https://vue.t.myltx.top/#/login',
       },
       {
         name: 'v2toclash',
-        desc: 'A project to convert v2vary to clashpro',
+        desc: '将 v2vary 转换为 clashpro 的项目',
         path: 'https://v2toclash.myltx.top/',
       },
       {
         name: 'vite-uniapp-template-ts',
-        desc: 'A vite-uniapp-template-ts project',
+        desc: '🚀 基于 vite + ts 驱动的 uniapp 最佳实践集成模板',
         path: 'https://github.com/myltx/vite-uniapp-template-ts',
       },
       {
         name: 'Vue3-Screen',
-        desc: 'A big screen project',
+        desc: '🚀 基于 Vue3 + Ts + Vite 开发的 大屏展示项目',
         path: 'https://large.screen.myltx.top/#/',
       },
       {
         name: 'Note',
-        desc: 'A notes project using vitepress',
+        desc: '使用 vitepress 的笔记项目',
         path: 'https://note.myltx.top/',
       },
     ],
   },
-  // {
-  //   name: 'Starter',
-  //   content: [
-  //     {
-  //       name: 'Virtuoso',
-  //       desc: 'My simply vue starter',
-  //       path: 'https://github.com/chansee97/virtuoso',
-  //     },
-  //   ],
-  // },
+  {
+    name: '常用模版/工具/框架/UI库',
+    content: [
+      {
+        name: 'Vitesse Uni App',
+        desc: '由 Vite & uni-app 驱动的跨端快速启动模板',
+        path: 'https://vitesse-docs.netlify.app/',
+      },
+      {
+        name: 'Vue Mini',
+        desc: '基于 Vue 3 的小程序框架',
+        path: 'https://vuemini.org/',
+      },
+      {
+        name: 'Uv Ui',
+        desc: '多平台快速开发的UI框架',
+        path: 'https://www.uvui.cn/',
+      },
+    ],
+  },
 ]
