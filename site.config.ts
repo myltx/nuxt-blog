@@ -46,7 +46,6 @@ export const navLinks = [
     path: '/',
     icon: 'i-icon-park-outline-grinning-face-with-open-mouth',
   },
-
 ]
 
 export const socialLinks = [
@@ -120,6 +119,26 @@ export const projectList = [
         name: 'Uv Ui',
         desc: '多平台快速开发的UI框架',
         path: 'https://www.uvui.cn/',
+      },
+      {
+        name: 'Vue3-demo',
+        desc: 'Vue3-demo',
+        path: 'https://github.com/vincentzyc/vue3-demo',
+      },
+    ],
+  },
+  {
+    name: '面试刷题',
+    content: [
+      {
+        name: '前端不外传的纸条',
+        desc: '前端不外传的纸条',
+        path: 'https://www.yuque.com/yuqueyonghua2m9wj/web_food/ezrm4x',
+      },
+      {
+        name: 'Interview Model',
+        desc: '面试题默写、手写版本，包含html，css，js，vue，react以及计算机网络，浏览器原理、性能优化',
+        path: 'https://github.com/oldTimer98/interviewModel',
       },
     ],
   },
