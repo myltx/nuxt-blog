@@ -125,6 +125,12 @@ export const projectList = [
         desc: 'Vue3-demo',
         path: 'https://github.com/vincentzyc/vue3-demo',
       },
+      {
+        name: 'VueJs-blog',
+        desc: 'VueJs-blog',
+        path: 'https://blog.vuejs.org/',
+      },
+
     ],
   },
   {
