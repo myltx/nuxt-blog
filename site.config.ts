@@ -130,6 +130,11 @@ export const projectList = [
         desc: 'VueJs-blog',
         path: 'https://blog.vuejs.org/',
       },
+      {
+        name: 'Slidev',
+        desc: '为开发者打造的演示文稿工具',
+        path: 'https://cn.sli.dev/',
+      },
 
     ],
   },
