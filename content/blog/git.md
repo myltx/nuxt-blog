@@ -90,3 +90,11 @@ git cherry-pick [commit-hash1]..[commit-hash2]
 
 ```
 
+## 修改仓库地址
+```shell
+# 修改远程仓库地址
+git remote set-url origin [new-url]
+
+# 查看远程仓库地址
+git remote -v
+```
