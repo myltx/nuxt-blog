@@ -140,6 +140,11 @@ export const projectList = [
         desc: 'Vue3 & BMapGL 组件库 + hooks 库',
         path: 'https://yue1123.github.io/vue3-baidu-map-gl/',
       },
+      {
+        name: '@vueuse/motion',
+        desc: 'Vue 动画',
+        path: 'https://motion.vueuse.org/',
+      },
     ],
   },
   {
