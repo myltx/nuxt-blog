@@ -135,7 +135,11 @@ export const projectList = [
         desc: '为开发者打造的演示文稿工具',
         path: 'https://cn.sli.dev/',
       },
-
+      {
+        name: 'vue3-baidu-map-gl',
+        desc: 'Vue3 & BMapGL 组件库 + hooks 库',
+        path: 'https://yue1123.github.io/vue3-baidu-map-gl/',
+      },
     ],
   },
   {
