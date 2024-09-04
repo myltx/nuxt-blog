@@ -8,9 +8,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/stylelint-module',
   ],
+
   devServer: {
     port: 8000, // default: 3000
   },
+
   app: {
     rootId: 'nuxt-root',
     head: {
@@ -32,6 +34,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   content: {
     highlight: {
       theme: {
@@ -45,6 +48,7 @@ export default defineNuxtConfig({
       preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml'],
     },
   },
+
   css: [
     '@unocss/reset/tailwind.css',
     '@/assets/styles/global.scss',
@@ -52,8 +56,11 @@ export default defineNuxtConfig({
     '@/assets/styles/transition.css',
     '@/assets/styles/markdown.scss',
   ],
+
   stylelint: {
     /* module options */
     lintOnStart: false,
   },
+
+  compatibilityDate: '2024-09-04',
 })

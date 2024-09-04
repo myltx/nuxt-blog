@@ -8,6 +8,13 @@ title: h5转换为uniapp调研
 en-title: h5转换为uniapp调研
 ---
 
+## 升级指南
+
+[uniapp官方指南](https://ask.dcloud.net.cn/article/36174)
+
+
+- 因为公司项目的情况不同所以自己做了以下调研去升级项目
+## 调研内容
 ### 1. 需要修改内容
 
 *   ui库替换
@@ -22,6 +29,7 @@ en-title: h5转换为uniapp调研
 
 *   [uni-vue3-vite-ts-pinia](https://github.com/ttk-cli/uni-vue3-vite-ts-pinia)
 *   [vite-uniapp-template](https://github.com/viarotel-org/vite-uniapp-template)
+*   [vite-uniapp-template-ts](https://github.com/myltx/vite-uniapp-template-ts)
 
 ### 3. 可用ui库
 
@@ -112,6 +120,48 @@ export default defineConfig({
     *   便于迁移
 
 2.  使用uniapp工具创建项目
+
+## 具体实施
+- 因为项目使用的是 `vite + vue3 + ts + vant` 所以使用了 [vite-uniapp-template-ts](https://github.com/myltx/vite-uniapp-template-ts)
+### 1. 页面迁移
+
+- 将原本的页面迁移到新的项目中，并修改对应的路径
+- 路由需要在 `pages.config.ts` 中配置,
+- 因为小程序对于发布的包体大小有限制,所以尽量在迁移时做好分包处理
+- [路由配置说明](https://github.com/myltx/vite-uniapp-template-ts/blob/main/ROUTER_CONFIG.md)
+
+### 2.CSS样式与UI库迁移
+- 正常`class`的样式可以直接迁移，但是因为 `span` 以及 `img` 在 `uniapp` 中的特殊性, 直接使用 `span` 或者 `img` 写的样式需要使用 `class` 做处理
+  - `img` 在转换后会变为 `image` 标签
+  - `span` 在转换后会变为 `view` 标签
+- `UI` 框架的替换时需要注意不同的 `UI` 库使用的标签与语法的不同，需要做对应的替换
+  
+### 3.js逻辑迁移
+- 需要注意 `uniapp` 中的特殊生命周期等不同处的处理
+
+### 4.请求迁移
+- 根据原本项目配置调整 `@/utils/request/index` 中的逻辑
+
+### 5.静态资源迁移
+- 因为小程序包体限制，可以选择尽量使用远程资源，可以参考项目中 [vite-uniapp-template-ts](https://github.com/myltx/vite-uniapp-template-ts) `README.md`中 `态资源处理` 下的示例
+
+### 6.其他
+- 发布时尽量使用 `pnpm build:xxx` 命令打包后发布
+- 暂时想到的就这么多
+
+<!-- - `uniapp` 中不支持 `:hover` 伪类，需要使用 `@tap` 代替 -->
+<!-- - 使用 `class` 的样式可以直接迁移，但是因为 `uniapp` 中的 `class` 的优先级问题，需要将原本的 `!important` 去掉，否则样式可能会被覆盖 -->
+<!-- - `uniapp` 中不支持 `:hover` 伪类，需要使用 `@tap` 代替
+- `uniapp` 中不支持 `:before` 和 `:after` 伪类，需要使用 `::before` 和 `::after` 代替
+- `uniapp` 中不支持 `::placeholder` 伪类，需要使用 `input-placeholder` 代替
+- `uniapp` 中不支持 `::selection` 伪类，需要使用 `selection` 代替
+- `uniapp` 中不支持 `::before` 和 `::after` 伪类，需要使用 `::before` 和 `::after` 代替
+- `uniapp` 中不支持 `::placeholder` 伪类，需要使用 `input-placeholder` 代替
+- `uniapp` 中不支持 `::selection` 伪类，需要使用 `selection` 代替
+- `uniapp` 中不支持 `::before` 和 `::after` 伪类，需要使用 `::before` 和 `::after` 代替
+- `uniapp` 中不支持 `::placeholder` 伪类，需要使用 `input-placeholder` 代替
+- `uniapp` 中不支持 `::selection` 伪类，需要使用 `selection` 代替 -->
+
 
 遇到问题
 
