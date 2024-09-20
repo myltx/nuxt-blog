@@ -145,6 +145,21 @@ export const projectList = [
         desc: 'Vue 动画',
         path: 'https://motion.vueuse.org/',
       },
+      {
+        name: 'unisave',
+        desc: 'uniapp的开箱即用模版，适配所有(app、mp、web)平台！！！',
+        path: 'https://github.com/sunpm/unisave',
+      },
+      {
+        name: 'unibest',
+        desc: 'unibest - 好用的 uniapp 开发框架。',
+        path: 'https://github.com/codercup/unibest',
+      },
+      {
+        name: 'canvas-editor',
+        desc: 'canvas/svg 的富文本编辑器',
+        path: 'https://github.com/Hufe921/canvas-editor',
+      },
     ],
   },
   {
