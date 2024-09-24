@@ -163,6 +163,21 @@ export const projectList = [
     ],
   },
   {
+    name: '常用图标库',
+    content: [
+      {
+        name: 'iconify',
+        desc: 'iconify',
+        path: 'https://iconify.design/',
+      },
+      {
+        name: 'iconify预览',
+        desc: 'iconify预览',
+        path: 'https://icon-sets.iconify.design/',
+      },
+    ],
+  },
+  {
     name: '面试刷题',
     content: [
       {
