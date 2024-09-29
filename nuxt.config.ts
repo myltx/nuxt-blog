@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@nuxt/content',
+    '@nuxt/icon',
     '@nuxtjs/stylelint-module',
   ],
 
