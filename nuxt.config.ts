@@ -13,7 +13,6 @@ export default defineNuxtConfig({
   devServer: {
     port: 8000, // default: 3000
   },
-
   app: {
     rootId: 'nuxt-root',
     head: {

@@ -32,6 +32,7 @@
     "nuxt": "^3.8.2",
     "sass": "^1.69.5",
     "simple-git-hooks": "^2.9.0",
+    "typed.js": "^2.1.0",
     "typescript": "^5.0.0"
   },
   "simple-git-hooks": {
