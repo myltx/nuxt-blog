@@ -160,6 +160,11 @@ export const projectList = [
         desc: 'canvas/svg 的富文本编辑器',
         path: 'https://github.com/Hufe921/canvas-editor',
       },
+      {
+        name: 'typed.js',
+        desc: 'Typed.js 是一个轻量级的库，可以让你在网页上实现打字机效果。',
+        path: 'https://github.com/mattboldt/typed.js',
+      },
     ],
   },
   {
