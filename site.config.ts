@@ -165,6 +165,11 @@ export const projectList = [
         desc: 'Typed.js 是一个轻量级的库，可以让你在网页上实现打字机效果。',
         path: 'https://github.com/mattboldt/typed.js',
       },
+      {
+        name: 'gcoord',
+        desc: '地理坐标系转换工具',
+        path: 'https://github.com/hujiulong/gcoord',
+      },
     ],
   },
   {
