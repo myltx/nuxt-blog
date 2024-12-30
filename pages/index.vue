@@ -11,7 +11,6 @@ async function reset() {
   const { data } = await useAsyncData('me', () => $fetch('/dailySentence')) as { data: any }
   const jsonString = data.value.match(/\{.*\}/)?.[0]
   dailySentenceContent.value = JSON.parse(jsonString)
-  console.log(dailySentenceContent.value)
   typed.value = new Typed('#typed', {
     strings: [dailySentenceContent.value?.note],
     typeSpeed: 30,
