@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Nuxt 3 Blog</h1>
+  <h1>Nuxt 3 Blog </h1>
 </div>
 
 [Original warehouse address](https://github.com/chansee97/nuxt-blog)
