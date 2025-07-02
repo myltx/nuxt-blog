@@ -14,8 +14,6 @@ export default defineNuxtConfig({
     port: 8000, // default: 3000
   },
   app: {
-    baseURL: '/nuxt-blog/',
-    buildAssetsDir: '_nuxt/', // 确保不以绝对路径开头
     rootId: 'nuxt-root',
     head: {
       meta: [
