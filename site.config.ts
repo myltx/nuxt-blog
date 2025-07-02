@@ -76,6 +76,16 @@ export const projectList = [
     name: '个人项目',
     content: [
       {
+        name: 'dream-hub',
+        desc: '🚀 基于 nuxt3 、nestjs 实现实用网站保存、个人笔记记录功能',
+        path: 'https://dream-hub.myltx.top/',
+      },
+      // {
+      //   name: "lifabox-miniapp",
+      //   desc: "🚀 LifaBox 是一款基于 UniBest + UniApp + Vue3 开发的微信小程序",
+      //   path: "/blog",
+      // },
+      {
         name: 'Vue3-ts',
         desc: '🚀 基于 Vue3 + Ts + Vite 开发的后台管理项目',
         path: 'https://vue.t.myltx.top/#/login',
