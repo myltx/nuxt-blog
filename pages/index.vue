@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import Typed from "typed.js";
 
-reset();
+// reset();
 const dailySentenceContent = ref<any>("");
 const typed = ref<any>(null);
 const subTyped = ref<any>(null);
@@ -42,10 +42,10 @@ function stepComplete() {
 <template>
   <section class="prose">
     <ContentDoc path="me" class="slide-enter-content" />
-    <div class="w-[90%]">
+    <!-- <div class="w-[90%]">
       <div id="typed" class="element text-[22px] font-semibold" />
       <div id="subTyped" class="text-[22px] font-semibold mt-[10px]" />
-      <!-- <div id="timeTyped" class="text-[#999] mt-[10px] ml-[60%]" /> -->
-    </div>
+      <div id="timeTyped" class="text-[#999] mt-[10px] ml-[60%]" />
+    </div> -->
   </section>
 </template>
