@@ -41,9 +41,9 @@ en-title: React Learning Plan Phase 1 React Mindset Migration
 
 #### 📌 useState
 
-- [x] 实现一个计数器，包含 +1, -1, 重置功能
-
 ##### 💡 代码示例：计数器 +1 -1 重置
+
+- [x] 实现一个计数器，包含 +1, -1, 重置功能
 
 ```tsx
 import { useState } from "react";
@@ -82,9 +82,11 @@ function Counter() {
 export default Counter;
 ```
 
-- [x] 理解闭包陷阱
+---
 
 #### 理解闭包陷阱
+
+- [x] 理解闭包陷阱
 
 ##### 🔍 闭包陷阱解释
 
@@ -107,6 +109,8 @@ increment();
 - 使用 setCount(count + 1)，两次 increment 读到的是同一个旧值，只会 +1。
 - 使用 setCount(prevCount => prevCount + 1)，每次都会读取到最新的 state，结果 +2。
 
+---
+
 ##### ✅ 总结
 
 - 如果更新依赖于上一次的 state 值，一定要使用回调形式：
@@ -126,9 +130,9 @@ setCount((prevCount) => prevCount + 1);
 
 #### 📌 useEffect
 
-- [x] 实现页面加载后调用一次 API
-
 ##### 💡 1. useEffect 实现页面加载后调用一次 API
+
+- [x] 实现页面加载后调用一次 API
 
 ```tsx
 import { useEffect, useState } from "react";
@@ -172,15 +176,17 @@ function MyComponent() {
 export default MyComponent;
 ```
 
+---
+
 ###### 🔑 解释
 
 - useEffect(() => { ... }, [])
   - 第二个参数是空数组，代表仅在组件挂载（页面加载）时执行一次。
 - 如果不传依赖数组，每次渲染都会执行（通常会导致无限请求）。
 
-- [x] 实现依赖变化时更新数据
-
 ##### 💡 2. 依赖变化时更新数据
+
+- [x] 实现依赖变化时更新数据
 
 - 例如，当 id 变化时重新获取数据：
 
@@ -228,6 +234,8 @@ function MyComponent() {
 export default MyComponent;
 ```
 
+---
+
 ##### 🔑 解释
 
 - **[id]** 放在依赖数组中，意味着：
@@ -235,6 +243,8 @@ export default MyComponent;
 - 之后每当 id 改变时重新调用
 
 - [x] 理解 Vue watchEffect 与 useEffect 的差异
+
+---
 
 ##### 💡 3. Vue 的 watchEffect 与 React useEffect 的差异
 
@@ -247,6 +257,8 @@ export default MyComponent;
 | 清理函数     | onCleanup(() => {...}) 或 return        | return () => {...} 返回清理函数                                        |
 | 响应式系统   | 基于 Vue 响应式                         | React 无响应式，state/props 变化会重新渲染，useEffect 依赖数组追踪变化 |
 
+---
+
 ##### 🔍 核心理解
 
 1. Vue watchEffect
@@ -257,6 +269,8 @@ export default MyComponent;
 1. React useEffect
    - 需要明确告诉 React 你依赖哪些值。
    - 避免了不必要的执行，但需要小心遗漏依赖导致逻辑错误。
+
+---
 
 ##### ✅ 4. 总结
 
@@ -276,10 +290,165 @@ useEffect(() => { ... }, [dep]);
   - Vue 更自动化，依赖自动收集
   - React 更显式，需要依赖数组
 
+---
+
 #### 📌 useMemo
 
-- [ ] 在列表渲染中缓存计算总和
-- [ ] 理解与 Vue computed 的使用场景区别
+##### 💡 1. useMemo 在列表渲染中缓存计算总和
+
+- 示例场景：有一个商品列表，需要计算总价
+- [x] 在列表渲染中缓存计算总和
+
+```tsx
+import { Button, Flex } from "antd";
+import { useMemo, useState } from "react";
+
+function ShoppingCart() {
+  const defaultItems = [
+    { id: 1, name: "苹果", price: 3, quantity: 2 },
+    { id: 2, name: "香蕉", price: 2, quantity: 5 },
+    { id: 3, name: "橙子", price: 4, quantity: 3 },
+  ];
+  const [items, setItems] = useState(defaultItems);
+
+  // 使用 useMemo 缓存总价计算
+  const total = useMemo(() => {
+    console.log("计算总价...");
+    return items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  }, [items]); // 只有 items 变化时，才重新计算
+
+  return (
+    <div>
+      <h2>🛒 购物车</h2>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            {item.name} - 单价: {item.price} x 数量: {item.quantity}
+            <Button
+              style={{ marginLeft: "8px" }}
+              size="small"
+              color="danger"
+              onClick={() =>
+                setItems((prevItems) =>
+                  prevItems.filter((i) => i.id !== item.id)
+                )
+              }>
+              删除
+            </Button>
+          </li>
+        ))}
+      </ul>
+      <h3>💰 总价: {total}</h3>
+      <Flex gap={"8px"} style={{ marginBottom: "16px" }}>
+        <Button
+          onClick={() =>
+            setItems((prevItems) => [
+              ...prevItems,
+              {
+                id: prevItems.length + 1,
+                name: "新商品",
+                price: 5,
+                quantity: 1,
+              },
+            ])
+          }>
+          添加新商品
+        </Button>
+        <Button
+          onClick={() =>
+            setItems((prevItems) =>
+              prevItems.map((item) =>
+                item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
+              )
+            )
+          }>
+          增加苹果数量
+        </Button>
+        <Button onClick={() => setItems(defaultItems)}>重置购物车</Button>
+      </Flex>
+    </div>
+  );
+}
+
+export default ShoppingCart;
+```
+
+---
+
+##### 🔑 解释
+
+- useMemo(() => { ... }, [依赖])：
+
+  - 只有依赖变化时，才会重新执行函数。
+  - 否则返回上一次缓存的结果，避免不必要的计算。
+
+---
+
+##### 💡 2. useMemo 与 Vue computed 的使用场景区别
+
+- [x] 理解与 Vue computed 的使用场景区别
+
+| 对比维度                            | React useMemo                                    | Vue computed                      |
+| ----------------------------------- | ------------------------------------------------ | --------------------------------- |
+| 核心功能                            | 缓存计算结果，避免重复计算                       | 计算属性，依赖变化时重新计算      |
+| 响应式系统                          | 无内置响应式，需要依赖数组明确指明               | 自动依赖收集，基于 Vue 响应式系统 |
+| 使用场景                            | 性能优化：避免组件重新渲染时重复执行消耗大的计算 | 响应式派生数据，逻辑层常用        |
+| 是否必须                            | 仅当计算开销较大时使用；否则可以直接写函数       | Vue 中 computed 是常用模式        |
+| 语义差异本质是缓存值（Memoization） | 本质是声明式计算属性                             |
+
+---
+
+##### 🔍 示例区别
+
+###### React useMemo：
+
+```js
+const total = useMemo(() => {
+  // 计算总价
+}, [items]);
+```
+
+###### ✅ 用途：
+
+- 防止每次渲染都执行 reduce，只在 items 变化时重新计算。
+
+---
+
+###### Vue computed
+
+```js
+import { computed } from "vue";
+
+const total = computed(() => {
+  return items.value.reduce((sum, item) => sum + item.price * item.quantity, 0);
+});
+```
+
+---
+
+###### ✅ 用途：
+
+- 计算属性自动收集 items 依赖，items 变化时重新计算。
+- 在模板中 { total } 使用时，表现为普通变量。
+
+---
+
+##### ✅ 3. 总结
+
+| React useMemo              | Vue computed       |
+| -------------------------- | ------------------ |
+| 用于性能优化，避免重复计算 | 用于声明式派生数据 |
+| 需要明确指定依赖           | 自动追踪响应式依赖 |
+| 返回缓存值，不是响应式     | 返回响应式计算属性 |
+
+---
+
+##### ⚠️ 最佳实践
+
+- **React**: 不要滥用 **useMemo**，只有当计算开销较大且 **render** 中重复调用时才使用。
+- **Vue**: **computed** 是最常用模式，避免模板逻辑过多。
+
+---
 
 #### 📌 useCallback
 
